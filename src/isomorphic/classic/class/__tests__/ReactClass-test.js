@@ -394,8 +394,6 @@ describe('ReactClass-spec', function() {
           return <span>{this.props.prop}</span>;
         },
       });
-    expect(MyComponent.propTypes.optionalNumber).toBeDefined();
-    expect(MyComponent.propTypes.optionalEnum).toBeUndefined();
     expect(console.error.mock.calls.length).toBe(1);
     expect(console.error.mock.calls[0][0]).toContain(
         'Invalid argument supplied to oneOf, expected an instance of array.'
