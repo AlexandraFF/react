@@ -107,7 +107,7 @@ https://github.com/rppc/react/blob/master/src/isomorphic/classic/class/__tests__
 
 Pull request:
 
-https://github.com/facebook/react/pull/5475
+https://github.com/facebook/react/pull/5476
 
 ### <a name="analise"></a>Análise Crítica
 
