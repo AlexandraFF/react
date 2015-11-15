@@ -340,8 +340,7 @@ var RESERVED_SPEC_KEYS = {
       validateTypeDef(
         Constructor,
         childContextTypes,
-        ReactPropTypeLocations.childContext,
-        false
+        ReactPropTypeLocations.childContext
       );
     }
     Constructor.childContextTypes = assign(
@@ -355,8 +354,7 @@ var RESERVED_SPEC_KEYS = {
       validateTypeDef(
         Constructor,
         contextTypes,
-        ReactPropTypeLocations.context,
-        false
+        ReactPropTypeLocations.context
       );
     }
     Constructor.contextTypes = assign(
@@ -384,8 +382,7 @@ var RESERVED_SPEC_KEYS = {
       validateTypeDef(
         Constructor,
         propTypes,
-        ReactPropTypeLocations.prop,
-        true
+        ReactPropTypeLocations.prop
       );
     }
     Constructor.propTypes = assign(
@@ -400,7 +397,7 @@ var RESERVED_SPEC_KEYS = {
   autobind: function() {}, // noop
 };
 
-function validateTypeDef(Constructor, typeDef, location, checkProps) {
+function validateTypeDef(Constructor, typeDef, location) {
   for (var propName in typeDef) {
     if (typeDef.hasOwnProperty(propName)) {
       // use a warning instead of an invariant so components
@@ -413,15 +410,6 @@ function validateTypeDef(Constructor, typeDef, location, checkProps) {
         ReactPropTypeLocationNames[location],
         propName
       );
-
-      // Calls type checker.
-      if ((typeof typeDef[propName] === 'function') && checkProps && typeDef[propName].interpretAsError) {
-        var error = typeDef[propName](null);
-        if (error instanceof Error) {
-          warning(false, '%s', error.message);
-          typeDef[propName] = undefined;
-        }
-      }
     }
   }
 }

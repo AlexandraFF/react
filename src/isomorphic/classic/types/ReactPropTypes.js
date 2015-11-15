@@ -96,7 +96,7 @@ function createChainableTypeChecker(validate) {
   ) {
     componentName = componentName || ANONYMOUS;
     propFullName = propFullName || propName;
-    if (props != null && props[propName] == null) {
+    if (props[propName] == null) {
       var locationName = ReactPropTypeLocationNames[location];
       if (isRequired) {
         return new Error(
@@ -112,8 +112,6 @@ function createChainableTypeChecker(validate) {
 
   var chainedCheckType = checkType.bind(null, false);
   chainedCheckType.isRequired = checkType.bind(null, true);
-
-  chainedCheckType.interpretAsError = false;
 
   return chainedCheckType;
 }
@@ -210,13 +208,12 @@ function createInstanceTypeChecker(expectedClass) {
 
 function createEnumTypeChecker(expectedValues) {
   if (!Array.isArray(expectedValues)) {
-    var error = createChainableTypeChecker(function() {
+    warning(false, 'Invalid argument supplied to oneOf, expected an instance of array.');
+    return createChainableTypeChecker(function() {
       return new Error(
         `Invalid argument supplied to oneOf, expected an instance of array.`
       );
     });
-    error.interpretAsError = true;
-    return error;
   }
 
   function validate(props, propName, componentName, location, propFullName) {
@@ -274,13 +271,12 @@ function createObjectOfTypeChecker(typeChecker) {
 
 function createUnionTypeChecker(arrayOfTypeCheckers) {
   if (!Array.isArray(arrayOfTypeCheckers)) {
-    var error = createChainableTypeChecker(function() {
+    warning(false, 'Invalid argument supplied to oneOfType, expected an instance of array.')
+    return createChainableTypeChecker(function() {
       return new Error(
         `Invalid argument supplied to oneOfType, expected an instance of array.`
       );
     });
-    error.interpretAsError = true;
-    return error;
   }
 
   function validate(props, propName, componentName, location, propFullName) {
