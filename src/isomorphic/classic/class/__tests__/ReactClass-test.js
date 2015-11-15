@@ -398,5 +398,6 @@ describe('ReactClass-spec', function() {
     expect(console.error.mock.calls[0][0]).toContain(
         'Invalid argument supplied to oneOf, expected an instance of array.'
       );
+    console.error = warn;
   });
 });
