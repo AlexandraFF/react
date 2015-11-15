@@ -105,6 +105,10 @@ Caso de teste:
 
 https://github.com/rppc/react/blob/master/src/isomorphic/classic/class/__tests__/ReactClass-test.js#L384
 
+Pull request:
+
+https://github.com/facebook/react/pull/5475
+
 ### <a name="analise"></a>Análise Crítica
 
 
