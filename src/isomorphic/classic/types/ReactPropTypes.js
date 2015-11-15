@@ -13,6 +13,7 @@
 
 var ReactElement = require('ReactElement');
 var ReactPropTypeLocationNames = require('ReactPropTypeLocationNames');
+var warning = require('warning');
 
 var emptyFunction = require('emptyFunction');
 var getIteratorFn = require('getIteratorFn');
