@@ -407,5 +407,4 @@ describe('ReactClass-spec', function() {
       console.error = warn;
     }
   });
-
 });
