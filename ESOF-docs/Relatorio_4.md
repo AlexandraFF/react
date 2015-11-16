@@ -85,6 +85,12 @@ A *framework* [Jest](https://facebook.github.io/jest/), ferramenta para testes u
 
 -- Utilização do Jest no React: https://github.com/facebook/jest/blob/fd33aad1da1ed430b656719c7a0e00bb7952c6df/docs/TutorialReact.md
 
+#### <a name="cobertura"></a>Cobertura dos Testes
+
+De forma a conseguir estudar a cobertura do projeto React, utilizou-se a ferramenta [istanbul](http://gotwarlost.github.io/istanbul/), a que permite testar a cobertura do código JavaScropt.
+
+![Teste de Cobertura](./Resources/Testes de Cobertura.png)
+
 ### <a name="opcional"></a>Fix Bug Report 
 
 Bug escolhido: https://github.com/facebook/react/issues/5468
