@@ -67,6 +67,7 @@ Durante o desenvolvimento de um *test suite*, é importante conhecer a funcional
 -- Referir que a utilização de um repositório Git que pode receber contribuições de muitos utilizadores conduz à necessidade de testes de integração com Travis CI, que são aplicados em paralelo com os testes unitários definidos com Jest.
 
 Uma vez que o React é uma biblioteca *open-source*, e, por conseguinte, sujeita a contribuições de vários programadores, é necessário garantir que, após a aceitação e a incorporação das modificações dos *pull-requests*, o sistema permanece funcional. Desta forma, é testada a integrabilidade do sistema, em paralelo com a realização de testes unitários incidentes nos vários elementos da biblioteca.
+
 Por um lado, a realização de testes unitários ao nível da classe permite garantir a consistência dos elementos da biblioteca, com o recurso à *framework* [Jest](https://facebook.github.io/jest/). Por outro lado, é preciso averiguar se a integração dos vários elementos é feita de forma correcta. Nesta vertente, é utilizada a ferramenta [Travis CI](https://travis-ci.org/facebook/react), que premite automatizar este processo.
 
 
