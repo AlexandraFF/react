@@ -89,7 +89,7 @@ A *framework* [Jest](https://facebook.github.io/jest/), ferramenta para testes u
 
 #### <a name="cobertura"></a>Cobertura dos Testes
 
-De forma a conseguir estudar a cobertura do projeto React, utilizou-se a ferramenta [istanbul](http://gotwarlost.github.io/istanbul/), a que permite testar a cobertura do código JavaScropt.
+De forma a conseguir estudar a cobertura do projeto React, utilizou-se a ferramenta [istanbul](http://gotwarlost.github.io/istanbul/), que permite testar a cobertura do código JavaScript.
 
 ![Teste de Cobertura](./Resources/Testes de Cobertura.png)
 
