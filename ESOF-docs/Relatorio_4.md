@@ -57,9 +57,9 @@ Por outro lado, é também importante isolar o conjunto de funcionalidades que s
 
 Em projectos de dimensão considerável, a componente de documentação possui um peso bastante considerável, por forma a garantir a consistência de uso dos vários elementos disponibilizados.
 
-A biblioteca React [disponibiliza uma API](https://facebook.github.io/react/docs/top-level-api.html) dos vários recursos, que, no ponto de vista dos autores do relatório, é bastante extensiva e concisa. Para além desta documentação, é possível encontrar, ao longo do código, vários elementos (comentários, nomes de variáveis, ...), que permitem um maior esclarecimento das entidades aí presentes, tal como se verifica [neste exemplo](https://github.com/facebook/react/blob/master/src/renderers/dom/client/ReactMount.js).
+A biblioteca React [apresenta uma API](https://facebook.github.io/react/docs/top-level-api.html) dos vários recursos, que, no ponto de vista dos autores do relatório, é bastante extensiva e concisa. Para além desta documentação, é possível encontrar, ao longo do código, vários elementos (comentários, nomes de variáveis, ...), que permitem um maior esclarecimento das entidades aí presentes, tal como se verifica [neste exemplo](https://github.com/facebook/react/blob/master/src/renderers/dom/client/ReactMount.js).
 
-Tendo em conta a documentação, é possível desenvolver um *test suit* que abranja um maior número de casos, o que permite detectar um maior número de *defects* no código.
+Durante o desenvolvimento de um *test suite*, é importante conhecer a funcionalidade dos vários elementos. Contudo, esse conhecimento só é possível de ser adquirido caso exista uma documentação bem estruturada, daí a importância dessa documentação relativa aos elementos a serem testados. Desta forma, é possível cobrir um maior número de casos a testar, e, por conseguinte, averiguar a robustez do código.
 
 #### <a name="heterogeneity"></a>Heterogeneidade
 
