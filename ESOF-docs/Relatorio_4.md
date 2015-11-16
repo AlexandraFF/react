@@ -61,23 +61,24 @@ A biblioteca React [apresenta uma API](https://facebook.github.io/react/docs/top
 
 Durante o desenvolvimento de um *test suite*, é importante conhecer a funcionalidade dos vários elementos. Contudo, esse conhecimento só é possível de ser adquirido caso exista uma documentação bem estruturada, daí a importância dessa documentação relativa aos elementos a serem testados. Desta forma, é possível cobrir um maior número de casos a testar, e, por conseguinte, averiguar a robustez do código.
 
+
 #### <a name="heterogeneity"></a>Heterogeneidade
 
 -- Referir que a utilização de um repositório Git que pode receber contribuições de muitos utilizadores conduz à necessidade de testes de integração com Travis CI, que são aplicados em paralelo com os testes unitários definidos com Jest.
 
-Uma vez que o React é uma biblioteca *open-source*, e, por conseguinte, sujeita a contribuições de vários programadores, é necessário garantir que, após a aceitação e a incorporação das modificações dos *pull-requests*, o sistema permanece funcional. Desta forma é testada a integrabilidade do sistema, em paralelo com a realização de testes unitários incidentes nos vários elementos da biblioteca.
+Uma vez que o React é uma biblioteca *open-source*, e, por conseguinte, sujeita a contribuições de vários programadores, é necessário garantir que, após a aceitação e a incorporação das modificações dos *pull-requests*, o sistema permanece funcional. Desta forma, é testada a integrabilidade do sistema, em paralelo com a realização de testes unitários incidentes nos vários elementos da biblioteca.
 Por um lado, a realização de testes unitários ao nível da classe permite garantir a consistência dos elementos da biblioteca, com o recurso à *framework* [Jest](https://facebook.github.io/jest/). Por outro lado, é preciso averiguar se a integração dos vários elementos é feita de forma correcta. Nesta vertente, é utilizada a ferramenta [Travis CI](https://travis-ci.org/facebook/react), que premite automatizar este processo.
-
 
 
 ### <a name="estatisticas"></a>Estatísticas de Teste
 
 -- Exemplos de logs do Travis CI. Tentar recolher estatísticas de cobertura dos testes Travis CI. Referir possibilidade de recolher estatísticas de cobertura com Jest (https://facebook.github.io/jest/docs/api.html#config-collectcoverage-boolean). Já publiquei no fórum: https://discuss.reactjs.org/t/line-coverage-for-tests-on-react/2479
+
 -- Link a estudar https://github.com/travis-ci/travis-logs
 
-#### <a name="travis"></a>Travis IC
+#### <a name="travis"></a>Travis CI
 
-Travis IC consiste numa ferramenta muito versátil e útil para este projeto. Na sua vertente [Travis Logs] (https://github.com/travis-ci/travis-logs), processa atualizações do log que são transmitidos de outra vertente, [Travis Worker] (https://github.com/travis-ci/worker), via [RabbitMQ] (http://www.rabbitmq.com/), um programa *open-source* [intermediário para envio de mensagens] (https://en.wikipedia.org/wiki/Message_broker). Uma vez que todas as peças de log forem recebidas, e passado um tempo limite padronizado de 10 segundos, estas peças são agregadas num log final.
+Travis CI consiste numa ferramenta muito versátil e útil para este projeto. Na sua vertente [Travis Logs] (https://github.com/travis-ci/travis-logs), processa atualizações do log que são transmitidos de outra vertente, [Travis Worker] (https://github.com/travis-ci/worker), via [RabbitMQ] (http://www.rabbitmq.com/), um programa *open-source* [intermediário para envio de mensagens] (https://en.wikipedia.org/wiki/Message_broker). Uma vez que todas as peças de log forem recebidas, e passado um tempo limite padronizado de 10 segundos, estas peças são agregadas num log final.
 
 #### <a name="jest"></a>Jest
 
@@ -87,7 +88,7 @@ A *framework* [Jest](https://facebook.github.io/jest/), ferramenta para testes u
 
 ### <a name="opcional"></a>Fix Bug Report 
 
-Bug escolhido: https://github.com/facebook/react/issues/5468
+*Bug* escolhido: https://github.com/facebook/react/issues/5468
 
 Regiões do código modificadas:
 
@@ -105,7 +106,7 @@ Caso de teste:
 
 https://github.com/rppc/react/blob/master/src/isomorphic/classic/class/__tests__/ReactClass-test.js#L384
 
-Pull request:
+*Pull request*:
 
 https://github.com/facebook/react/pull/5475
 
