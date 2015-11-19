@@ -3,7 +3,7 @@
 
 ### <a name="introducao"></a>Introdução
 
-O objetivo deste relatório consiste na a análise dos processos de verificação e validação (V&V) seguidos no desenvolvimento da biblioteca React, com a descrição de algumas das características deste projeto que digam respeito à aplicação desses processos.
+O objetivo deste relatório consiste na análise dos processos de verificação e validação (V&V) seguidos no desenvolvimento da biblioteca React, com a descrição de algumas das características deste projeto que digam respeito à aplicação desses processos.
 
 Numa primeira fase, explorar-se-á o grau de testabilidade do *software*, analisando a [controlabilidade](#controllability) do estado dos componentes, a [observabilidade](#observability) dos resultados e a [isolabilidade](#isolateability) dos componentes, assim como o grau de [separação](#separation) de funcionalidades, de [inteligibilidade](#understandability) dos componentes e de [heterogeneidade](#heterogeneity) das tecnologias utilizadas.
 
@@ -13,7 +13,7 @@ Finalmente, será realizado um exercício que consistirá na seleção de um *bu
 
 ### <a name="testabilidade"></a>Testabilidade do *Software*
 
-A discussão que se desenrolará nesta secção incidirá sobre o quão testável o projeto React é, isto é, até que ponto é possível verificar e validar a implementação da biblioteca. É de nota que tal discussão será acompanhada de exemplos e de referências que suportem a interpretação dos autores sempre que for considerado pertinente.
+A discussão que se desenrolará nesta secção incidirá sobre o quão testável o projeto React é, isto é, até que ponto é possível verificar e validar a implementação da biblioteca. É de notar que tal discussão será acompanhada de exemplos e de referências que suportem a interpretação dos autores sempre que for considerado pertinente.
 
 #### <a name="controllability"></a>Controlabilidade
 
@@ -46,7 +46,7 @@ Assim, é possível concluir que, no caso da biblioteca React, ao ser usada a *f
 
 #### <a name="separation"></a>Separação de Funcionalidades
 
-Ao desenvolver uma dada classe ou componente, é importante garantir que a funcionalidade atríbuida fique confinada, o mais possível, ao elemento a que diz respeito, sob pena de tornar o código mais confuso e, por conseguinte, menos testável. Com efeito, em projectos de dimensão considerável, este aspecto deve ser tomado em consideração por todos os elementos das equipas envolvidas no projecto, por forma a evitar a existência de [*Spaghetti code*](https://en.wikipedia.org/wiki/Spaghetti_code), que dificulta, a médio e a longo prazo, a manutenção do projecto.
+Ao desenvolver uma dada classe ou componente, é importante garantir que a funcionalidade atribuída fique confinada, o mais possível, ao elemento a que diz respeito, sob pena de tornar o código mais confuso e, por conseguinte, menos testável. Com efeito, em projectos de dimensão considerável, este aspecto deve ser tomado em consideração por todos os elementos das equipas envolvidas no projecto, por forma a evitar a existência de [*Spaghetti code*](https://en.wikipedia.org/wiki/Spaghetti_code), que dificulta, a médio e a longo prazo, a manutenção do projecto.
 
 De uma forma geral, a biblioteca React apresenta uma separação de funcionalidades bem definida, característica essa que está patente na organização de todo o projecto. Repare-se no exemplo de [renderização das páginas](https://github.com/facebook/react/tree/master/src/renderers/dom). A renderização de uma página web pode ser realizada quer no lado do cliente, quer no lado do servidor (esta última possibilitada através de [isomorfismo](./Relatorio_2.md#levantamento)); contudo, é efectuada de maneira diferente, consoante a entidade em questão. Tem-se, assim, uma separação importante da funcionalidade que é importante frisar, e que a *core-team* decidiu implementar através da criação de vários *packages*, expostos sob a forma de *folders*. 
 Por outro lado, é também importante isolar o conjunto de funcionalidades que são comuns quer no lado do cliente quer no servidor, com o principal intuito de evitar a repetição de código ([DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)) e promover a [reutilização de código](https://en.wikipedia.org/wiki/Code_reuse), por forma a evitar, ao máximo, a introdução de *bugs* e de incoerências no projecto. No React, o *package* *shared* contém, assim, os elementos que são utilizados por quaisquer das entidades já referidas (cliente ou servidor). 
@@ -61,14 +61,12 @@ A biblioteca React [apresenta uma API](https://facebook.github.io/react/docs/top
 
 Durante o desenvolvimento de um *test suite*, é importante conhecer a funcionalidade dos vários elementos. Contudo, esse conhecimento só é possível de ser adquirido caso exista uma documentação bem estruturada, daí a importância dessa documentação relativa aos elementos a serem testados. Desta forma, é possível cobrir um maior número de casos a testar, e, por conseguinte, averiguar a robustez do código.
 
-Em suma, a biblioteca React apresenta uma documentação API bastante satisfatória, aspecto bastante imortante durante a fase de Verificação e Validação de *Software*.
+Em suma, a biblioteca React apresenta uma documentação API bastante satisfatória, aspecto bastante importante durante a fase de Verificação e Validação de *Software*.
 
 #### <a name="heterogeneity"></a>Heterogeneidade
 
--- Referir que a utilização de um repositório Git que pode receber contribuições de muitos utilizadores conduz à necessidade de testes de integração com Travis CI, que são aplicados em paralelo com os testes unitários definidos com Jest.
-
 Uma vez que o React é uma biblioteca *open-source*, e, por conseguinte, sujeita a contribuições de vários programadores, é necessário garantir que, após a aceitação e a incorporação das modificações dos *pull-requests*, o sistema permanece funcional. Desta forma, é testada a integrabilidade do sistema, em paralelo com a realização de testes unitários incidentes nos vários elementos da biblioteca.
-Por um lado, a realização de testes unitários ao nível da classe permite garantir a consistência dos elementos da biblioteca, com o recurso à *framework* [Jest](https://facebook.github.io/jest/). Por outro lado, é preciso averiguar se a integração dos vários elementos é feita de forma correcta. Nesta vertente, é utilizada a ferramenta [Travis CI](https://travis-ci.org/facebook/react), que premite automatizar este processo.
+Por um lado, a realização de testes unitários ao nível da classe permite garantir a consistência dos elementos da biblioteca, com o recurso à *framework* [Jest](https://facebook.github.io/jest/). Por outro lado, é preciso averiguar se a integração dos vários elementos é feita de forma correcta. Nesta vertente, é utilizada a ferramenta [Travis CI](https://travis-ci.org/facebook/react), que permite automatizar este processo.
 
 Em conclusão, perante várias contribuições por parte de vários programadores, são utilizadas ferramentas de teste de integração, em paralelo com ferramentas de testes unitários.
 
@@ -80,11 +78,11 @@ Em conclusão, perante várias contribuições por parte de vários programadore
 
 #### <a name="travis"></a>Travis CI
 
-Travis CI consiste numa ferramenta muito versátil e útil para este projeto. Na sua vertente [Travis Logs] (https://github.com/travis-ci/travis-logs), processa atualizações do log que são transmitidos de outra vertente, [Travis Worker] (https://github.com/travis-ci/worker), via [RabbitMQ] (http://www.rabbitmq.com/), um programa *open-source* [intermediário para envio de mensagens] (https://en.wikipedia.org/wiki/Message_broker). Uma vez que todas as peças de log forem recebidas, e passado um tempo limite padronizado de 10 segundos, estas peças são agregadas num log final.
+Travis CI consiste numa ferramenta muito versátil e útil para este projeto. Na sua vertente [Travis Logs](https://github.com/travis-ci/travis-logs), processa atualizações do log que são transmitidos de outra vertente, [Travis Worker](https://github.com/travis-ci/worker), via [RabbitMQ](http://www.rabbitmq.com/), um programa *open-source* [intermediário para envio de mensagens](https://en.wikipedia.org/wiki/Message_broker). Uma vez que todas as peças de log forem recebidas, e passado um tempo limite padronizado de 10 segundos, estas peças são agregadas num log final.
 
 #### <a name="jest"></a>Jest
 
-A *framework* [Jest](https://facebook.github.io/jest/), ferramenta para testes unitários do [Facebook] (https://github.com/facebook/), utilizada para testar as aplicações React de forma simples. Estes [testes] (http://facebook.github.io/react/docs/test-utils.html) manipulam componentes do React averiguando o seu comportamento. Para um teste unitário operar numa unidade isolada da aplicação é necessário *mock* todos os módulos exceto aquele que está a ser testado. Jest constrói o *mocking* das partes de uma aplicação [Flux] (https://facebook.github.io/flux/) trivial. Flux é a arquitetura da aplicação que o Facebook utiliza para construir aplicações *web* com o React.
+A *framework* [Jest](https://facebook.github.io/jest/), ferramenta para testes unitários do [Facebook](https://github.com/facebook/), é utilizada para testar as aplicações React de forma simples. Estes [testes](http://facebook.github.io/react/docs/test-utils.html) manipulam componentes do React averiguando o seu comportamento. Para um teste unitário operar numa unidade isolada da aplicação é necessário *mock* todos os módulos exceto aquele que está a ser testado. Jest constrói o *mocking* das partes de uma aplicação [Flux](https://facebook.github.io/flux/) trivial. Flux é a arquitetura da aplicação que o Facebook utiliza para construir aplicações *web* com o React.
 
 -- Utilização do Jest no React: https://github.com/facebook/jest/blob/fd33aad1da1ed430b656719c7a0e00bb7952c6df/docs/TutorialReact.md
 
@@ -98,9 +96,11 @@ A partir da imagem acima, que testa todos os ficheiros presentes na pasta src do
 
 ### <a name="opcional"></a>Fix Bug Report 
 
-*Bug* escolhido: https://github.com/facebook/react/issues/5468
+Tendo sido discutido o grau de testabilidade da biblioteca React, vai-se, agora, de seguida, seleccionar um *bug* já identificado, proceder à correcção do mesmo, gerar casos de teste que cubram tal correcção, e, for fim, submeter para apreciação pela *core-team*. Assim, sendo, será apresentada, de seguida, a proposta escolhida pelos autores do relatório.
 
-Regiões do código modificadas:
+**_Bug_ escolhido:** https://github.com/facebook/react/issues/5468
+
+**Regiões do código modificadas:**
 
 https://github.com/rppc/react/blob/master/src/isomorphic/classic/class/ReactClass.js#L344
 https://github.com/rppc/react/blob/master/src/isomorphic/classic/class/ReactClass.js#L359
@@ -112,11 +112,11 @@ https://github.com/rppc/react/blob/master/src/isomorphic/classic/types/ReactProp
 https://github.com/rppc/react/blob/master/src/isomorphic/classic/types/ReactPropTypes.js#L213
 https://github.com/rppc/react/blob/master/src/isomorphic/classic/types/ReactPropTypes.js#L277
 
-Caso de teste:
+**Caso de teste**:
 
 https://github.com/rppc/react/blob/master/src/isomorphic/classic/class/__tests__/ReactClass-test.js#L384
 
-*Pull request*:
+**_Pull request_**:
 
 https://github.com/facebook/react/pull/5475
 
