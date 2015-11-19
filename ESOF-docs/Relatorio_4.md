@@ -94,27 +94,9 @@ De forma a conseguir estudar a cobertura do projeto React, utilizou-se a ferrame
 
 A partir da imagem acima, que testa todos os ficheiros presentes na pasta src do React, pode-se constatar que a cobertura a todos os projetos do React ultrapassa os 87% para os *statements*, para as *functions* e para as *lines* e 71% para os *branches*.
 
-### <a name="opcional"></a>Fix Bug Report 
+### <a name="opcional"></a>Correção de *Bug*
 
-Tendo sido discutido o grau de testabilidade da biblioteca React, vai-se, agora, de seguida, seleccionar um *bug* já identificado, proceder à correcção do mesmo, gerar casos de teste que cubram tal correcção, e, for fim, submeter para apreciação pela *core-team*. Assim, sendo, será apresentada, de seguida, a proposta escolhida pelos autores do relatório.
-
-**_Bug_ escolhido:** https://github.com/facebook/react/issues/5468
-
-**Regiões do código modificadas:**
-
-https://github.com/rppc/react/blob/master/src/isomorphic/classic/class/ReactClass.js#L344
-https://github.com/rppc/react/blob/master/src/isomorphic/classic/class/ReactClass.js#L359
-https://github.com/rppc/react/blob/master/src/isomorphic/classic/class/ReactClass.js#L388
-https://github.com/rppc/react/blob/master/src/isomorphic/classic/class/ReactClass.js#L403
-https://github.com/rppc/react/blob/master/src/isomorphic/classic/class/ReactClass.js#L418
-https://github.com/rppc/react/blob/master/src/isomorphic/classic/types/ReactPropTypes.js#L99
-https://github.com/rppc/react/blob/master/src/isomorphic/classic/types/ReactPropTypes.js#L116
-https://github.com/rppc/react/blob/master/src/isomorphic/classic/types/ReactPropTypes.js#L213
-https://github.com/rppc/react/blob/master/src/isomorphic/classic/types/ReactPropTypes.js#L277
-
-**Caso de teste**:
-
-https://github.com/rppc/react/blob/master/src/isomorphic/classic/class/__tests__/ReactClass-test.js#L384
+Após analisar o grau de testabilidade da biblioteca React, procedeu-se à seleção de um *bug* a partir da lista de *issues* do projeto e à conceção de casos de teste capazes de o reproduzir. O *bug* foi corrigido pelos autores deste relatório. Nesta secção, são apresentados alguns pormenores desse trabalho.
 
 **_Pull request_**:
 
