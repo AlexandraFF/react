@@ -80,7 +80,7 @@ Em conclusão, perante várias contribuições por parte de vários programadore
 
 #### <a name="travis"></a>Travis CI
 
-Travis CI consiste numa ferramenta muito versátil e útil para este projeto. Na sua vertente [Travis Logs] (https://github.com/travis-ci/travis-logs), processa atualizações do log que são transmitidos de outra vertente, [Travis Worker] (https://github.com/travis-ci/worker), via [RabbitMQ] (http://www.rabbitmq.com/), um programa *open-source* [intermediário para envio de mensagens] (https://en.wikipedia.org/wiki/Message_broker). Uma vez que todas as peças de log forem recebidas, e passado um tempo limite padronizado de 10 segundos, estas peças são agregadas num log final.
+Travis CI consiste numa ferramenta muito versátil e útil para este projeto. Na sua vertente [Travis Logs] (https://github.com/travis-ci/travis-logs), processa atualizações do log que são transmitidos de outra vertente, [Travis Worker] (https://github.com/travis-ci/worker), via [RabbitMQ](http://www.rabbitmq.com/), um programa *open-source* [intermediário para envio de mensagens] (https://en.wikipedia.org/wiki/Message_broker). Uma vez que todas as peças de log forem recebidas, e passado um tempo limite padronizado de 10 segundos, estas peças são agregadas num log final.
 
 #### <a name="jest"></a>Jest
 
@@ -122,6 +122,23 @@ https://github.com/facebook/react/pull/5475
 
 ### <a name="analise"></a>Análise Crítica
 
+Quanto à [controlabilidade](#controllability) podemos concluir que o projecto React utiliza duas ferramentas, Jest e Travis CI, que irão garantir que o seu código está dividamente desenvolvido.Para tal recorre-se ao uso de testes exaustivos para garantir o menor número posível de erros no programa.
+
+[Observabilidade](#observability)
+
+[isolabilidade](#isolateability) 
+
+O uso do [Jest](https://facebook.github.io/jest/) tem um grande contributo nesta secção. Graças a esta ferramente, é possível testar especificamente o módulo desejado pelos *developers*, sem que o uso de funções externas ao módulo em causa seja uma variável ao teste, através do *mocks*, como descrito anteriormente.
+
+[separação](#separation) 
+
+Os responsáveis pelo React, foram, ao longo do tempo que despenderam no projecto, promovendo o uso de boas práticas de programação para garantir que o código estaria o mais organizado possível, mesmo com a adição de novos membros na ajuda.
+Para isso, recorreram ao uso de funções genéricas para evitar o uso de código repetido e criação de funções específicas tanto para o cliente como para o servidor. 
+
+[inteligibilidade](#understandability) 
+
+Mais uma vez, a *core-team* do React demonstra o seu rigor estrutural neste projeto, neste caso em relação à compreensão do código existente nesta biblioteca. Analisando todo código, é possível verificar o uso recorrente de comentários explicativos das funções apresentadas, por exemplo. Isto torna a tarefa de quem quer ajudar a crescer este proecto, algo muito mais fácil.
+[heterogeneidade](#heterogeneity)
 
 
 ### <a name="info"></a>Informações
