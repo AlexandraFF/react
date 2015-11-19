@@ -76,6 +76,8 @@ Em conclusão, perante várias contribuições por parte de vários programadore
 
 -- Link a estudar https://github.com/travis-ci/travis-logs
 
+> "Test coverage analysis is an important tool that any development team taking testing seriously should use.", Arie van Deursen, 2013. 
+
 #### <a name="travis"></a>Travis CI
 
 Travis CI consiste numa ferramenta muito versátil e útil para este projeto. Na sua vertente [Travis Logs](https://github.com/travis-ci/travis-logs), processa atualizações do log que são transmitidos de outra vertente, [Travis Worker](https://github.com/travis-ci/worker), via [RabbitMQ](http://www.rabbitmq.com/), um programa *open-source* [intermediário para envio de mensagens](https://en.wikipedia.org/wiki/Message_broker). Uma vez que todas as peças de log forem recebidas, e passado um tempo limite padronizado de 10 segundos, estas peças são agregadas num log final.
