@@ -93,7 +93,7 @@ De forma a conseguir estudar a cobertura do projeto React, utilizou-se a ferrame
 
 ![Teste de Cobertura](./Resources/Testes de Cobertura.png)
 
-A partir da imagem acima, que testa todos os ficheiros presentes na pasta src do React, pode-se constatar que a cobertura a todos os projetos do React ultrapassa os 87% para os *statements*, para as *functions* e para as *lines* e 71% para os *branches.
+A partir da imagem acima, que testa todos os ficheiros presentes na pasta src do React, pode-se constatar que a cobertura a todos os projetos do React ultrapassa os 87% para os *statements*, para as *functions* e para as *lines* e 71% para os *branches*.
 
 ### <a name="opcional"></a>Fix Bug Report 
 
