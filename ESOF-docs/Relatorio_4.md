@@ -76,7 +76,9 @@ Em conclusão, perante várias contribuições por parte de vários programadore
 
 -- Link a estudar https://github.com/travis-ci/travis-logs
 
-> "Test coverage analysis is an important tool that any development team taking testing seriously should use.", Arie van Deursen, 2013. 
+> "Test coverage analysis is an important tool that any development team taking testing seriously should use."
+
+> Arie van Deursen, 2013. 
 
 #### <a name="travis"></a>Travis CI
 
