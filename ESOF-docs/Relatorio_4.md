@@ -100,6 +100,18 @@ A partir da imagem acima, que testa todos os ficheiros presentes na pasta src do
 
 Após analisar o grau de testabilidade da biblioteca React, procedeu-se à seleção de um *bug* a partir da lista de *issues* do projeto e à conceção de casos de teste capazes de o reproduzir. O *bug* foi corrigido pelos autores deste relatório. Nesta secção, são apresentados alguns pormenores desse trabalho.
 
+O *bug* escolhido foi assinalado pela primeira vez [neste](https://github.com/facebook/react/issues/5468) *bug report*. Com o React, é possível definir classes de elementos que farão parte da Vista, conforme já discutido no [Relatório 2](Relatorio_2.md#casos-de-uso). Cada classe pode ter campos, opcionais ou obrigatórios, conhecidos como *props* na nomenclatura do React. Cada *prop* pertence a um determinado tipo de dados, designado de [**PropType**](http://facebook.github.io/react/docs/reusable-components.html#prop-validation), cuja definição permitirá a sua validação quando for passado a um objeto da classe. Esses tipos podem ser tipos primitivos ou definidos com o recurso a funções da API do React, como mostra o exemplo seguinte para um tipo de dados enumerado.
+
+```javascript
+// You can ensure that your prop is limited to specific values by treating
+// it as an enum.
+optionalEnum: React.PropTypes.oneOf(['News', 'Photos']),
+```
+
+No exemplo acima, a função `React.PropTypes.oneOf()` deverá receber, como parâmetro, um *array* contendo o conjunto de valores possíveis que define o tipo de dados enumerado. Caso a função receba um objeto que não seja um *array*, deverá escrever um aviso na consola do *browser*. No entanto, antes da alteração realizada pelos autores deste relatório, esse aviso só era lançado no momento em que um objeto de uma dada classe anteriormente definida fosse instanciado e renderizado no DOM da página. Após a correção proposta, eventuais situações de erro como a descrita são assinaladas mais cedo, nomeadamente no momento em que a classe é criada, ou, mais genericamente, no momento em que a função `React.PropTypes.oneOf()` for chamada. Esta verificação também se passou a aplicar à função `React.PropTypes.oneOfType()`.
+
+Adicionalmente, foi criado [um caso de teste]() para reprodução do *bug*.
+
 **_Pull request_**:
 
 https://github.com/facebook/react/pull/5475
