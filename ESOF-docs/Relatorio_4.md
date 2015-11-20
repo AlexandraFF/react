@@ -72,13 +72,11 @@ Em conclusão, perante várias contribuições por parte de vários programadore
 
 ### <a name="estatisticas"></a>Estatísticas de Teste
 
--- Exemplos de logs do Travis CI. Tentar recolher estatísticas de cobertura dos testes Travis CI. Referir possibilidade de recolher estatísticas de cobertura com Jest (https://facebook.github.io/jest/docs/api.html#config-collectcoverage-boolean). Já publiquei no fórum: https://discuss.reactjs.org/t/line-coverage-for-tests-on-react/2479
-
--- Link a estudar https://github.com/travis-ci/travis-logs
-
 > "Test coverage analysis is an important tool that any development team taking testing seriously should use."
 
 > Arie van Deursen, 2013. 
+
+Um importante elemento para o sucesso de um projeto consiste na geração de testes e na respetiva análise às estatísticas obtidas. No React, um projeto de elevada dimensão e importância, as estatísticas de teste são fundamentais para manter o rumo correto e permite a resolução dos problemas e erros que surjam.
 
 #### <a name="travis"></a>Travis CI
 
@@ -86,9 +84,7 @@ Travis CI consiste numa ferramenta muito versátil e útil para este projeto. Na
 
 #### <a name="jest"></a>Jest
 
-A *framework* [Jest](https://facebook.github.io/jest/), ferramenta para testes unitários do [Facebook](https://github.com/facebook/), é utilizada para testar as aplicações React de forma simples. Estes [testes](http://facebook.github.io/react/docs/test-utils.html) manipulam componentes do React averiguando o seu comportamento. Para um teste unitário operar numa unidade isolada da aplicação é necessário *mock* todos os módulos exceto aquele que está a ser testado. Jest constrói o *mocking* das partes de uma aplicação [Flux](https://facebook.github.io/flux/) trivial. Flux é a arquitetura da aplicação que o Facebook utiliza para construir aplicações *web* com o React.
-
--- Utilização do Jest no React: https://github.com/facebook/jest/blob/fd33aad1da1ed430b656719c7a0e00bb7952c6df/docs/TutorialReact.md
+A *framework* [Jest](https://facebook.github.io/jest/), ferramenta para testes unitários do [Facebook](https://github.com/facebook/), é utilizada para testar as aplicações React de forma simples. Estes [testes](http://facebook.github.io/react/docs/test-utils.html) manipulam componentes do React averiguando o seu comportamento. Para um teste unitário operar numa unidade isolada da aplicação é necessário proceder ao *mock* de todos os módulos exceto aquele que está a ser testado. Jest constrói o *mocking* das partes de uma aplicação [Flux](https://facebook.github.io/flux/) trivial. Flux é a arquitetura da aplicação que o [Facebook utiliza](https://github.com/facebook/jest/blob/fd33aad1da1ed430b656719c7a0e00bb7952c6df/docs/TutorialReact.md) para construir aplicações *web* com o React.
 
 #### <a name="cobertura"></a>Cobertura dos Testes
 
@@ -96,7 +92,7 @@ De forma a conseguir estudar a cobertura do projeto React, utilizou-se a ferrame
 
 ![Teste de Cobertura](./Resources/Testes de Cobertura.png)
 
-A partir da imagem acima, que testa todos os ficheiros presentes na pasta src do React, pode-se constatar que a cobertura a todos os projetos do React ultrapassa os 87% para os *statements*, para as *functions* e para as *lines* e 71% para os *branches*.
+A partir da imagem acima, que testa todos os ficheiros presentes na pasta src do React, pode-se constatar que a cobertura a todos os projetos do React ultrapassa os 87% para os *statements*, para as *functions* e para as *lines* e 71% para os *branches*. Considera-se a cobertura razoável, sendo percetível pela imagem acima, para um projeto com a dimensão do React.
 
 ### <a name="opcional"></a>Correção de *Bug*
 
