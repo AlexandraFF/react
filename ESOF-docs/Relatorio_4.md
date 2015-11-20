@@ -45,12 +45,11 @@ Assim, é possível concluir que, ao ser usada a *framework* Jest para a defini�
 
 #### <a name="separation"></a>Separação de Funcionalidades
 
-Ao desenvolver uma dada classe ou componente, é importante garantir que a funcionalidade atribuída fique confinada, o mais possível, ao elemento a que diz respeito, sob pena de tornar o código mais confuso e, por conseguinte, menos testável. Com efeito, em projectos de dimensão considerável, este aspecto deve ser tomado em consideração por todos os elementos das equipas envolvidas no projecto, por forma a evitar a existência de [*Spaghetti code*](https://en.wikipedia.org/wiki/Spaghetti_code), que dificulta, a médio e a longo prazo, a manutenção do projecto.
+Ao desenvolver *software*, é importante garantir que cada funcionalidade implementada fique confinada, o mais possível, ao componente ao qual diz respeito, sob pena de o código resultar mais confuso e, por conseguinte, menos testável. Com efeito, em projetos de dimensão considerável, como é o do React, deve ser dada particular atenção a este aspeto, por forma a evitar a ocorrência de código desestruturado, que dificulta, a médio e a longo prazo, a manutenção.
 
-De uma forma geral, a biblioteca React apresenta uma separação de funcionalidades bem definida, característica essa que está patente na organização de todo o projecto. Repare-se no exemplo de [renderização das páginas](https://github.com/facebook/react/tree/master/src/renderers/dom). A renderização de uma página web pode ser realizada quer no lado do cliente, quer no lado do servidor (esta última possibilitada através de [isomorfismo](./Relatorio_2.md#levantamento)); contudo, é efectuada de maneira diferente, consoante a entidade em questão. Tem-se, assim, uma separação importante da funcionalidade que é importante frisar, e que a *core-team* decidiu implementar através da criação de vários *packages*, expostos sob a forma de *folders*. 
-Por outro lado, é também importante isolar o conjunto de funcionalidades que são comuns quer no lado do cliente quer no servidor, com o principal intuito de evitar a repetição de código ([DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)) e promover a [reutilização de código](https://en.wikipedia.org/wiki/Code_reuse), por forma a evitar, ao máximo, a introdução de *bugs* e de incoerências no projecto. No React, o *package* *shared* contém, assim, os elementos que são utilizados por quaisquer das entidades já referidas (cliente ou servidor). 
+De uma forma geral, a biblioteca React apresenta uma separação de funcionalidades bem definida, característica essa que está patente na organização de todo o projeto. Tome-se o exemplo da [renderização de páginas](https://github.com/facebook/react/tree/master/src/renderers/dom). A renderização de uma página Web pode ser realizada quer no lado do cliente, quer no lado do servidor, ocorrendo de maneira diferente em ambos os casos. Existe, assim, uma separação de funcionalidades que é necessário frisar. Assim, essas duas funcionalidades são implementadas em diferentes *packages*, que se traduzem em diretórios distintos. Por outro lado, também é importante isolar o conjunto de funcionalidades que são comuns ao cliente e ao servidor, com o principal intuito de evitar a repetição de código, promovendo a sua [reutilização](https://en.wikipedia.org/wiki/Code_reuse). Desta forma, reduz-se o risco de incoerências no código. Assim, o *package* [*shared*](https://github.com/facebook/react/tree/master/src/renderers/dom/shared) contém as funcionalidades que serão usadas tanto no lado do cliente como no lado do servidor. 
 
-É importante notar que a separação de funcionalidades facilita o [isolamento](#isolateability) do elemento na fase de testes, o que permite testar o código de forma mais incisiva e cobrir um maior número de situações de teste, tópico este já abordado na secção superior.
+É importante notar que a separação de funcionalidades facilita o [isolamento](#isolateability) do componente a ser testado, aspeto fulcral na definição de testes unitários, conforme discutido na subsecção anterior.
 
 #### <a name="understandability"></a>Inteligibilidade
 
@@ -141,17 +140,17 @@ O Travis CI é uma ajuda fundamental para tal propriedade ser possível neste pr
 ##### Autores:
 
 * António Casimiro (antonio.casimiro@fe.up.pt)
-	* Número de horas despendidas:
-	* Contribuição:
+	* Número de horas despendidas: 8
+	* Contribuição: 25%
 * Diogo Amaral (diogo.amaral@fe.up.pt)
-	* Número de horas despendidas:
-	* Contribuição:
+	* Número de horas despendidas: 8
+	* Contribuição: 25%
 * Pedro Silva (pedro.silva@fe.up.pt)
-	* Número de horas despendidas:
-	* Contribuição:
+	* Número de horas despendidas: 8
+	* Contribuição: 25%
 * Rui Cardoso (rui.peixoto@fe.up.pt)
-	* Número de horas despendidas:
-	* Contribuição:
+	* Número de horas despendidas: 8
+	* Contribuição: 25%
 
 Faculdade de Engenharia da Universidade do Porto - MIEIC
 
