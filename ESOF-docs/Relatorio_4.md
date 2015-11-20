@@ -134,6 +134,8 @@ Mais uma vez, a *core-team* do React demonstra o seu rigor estrutural neste proj
 
 ####[heterogeneidade](#heterogeneity)
 
+O Travis CI é uma ajuda fundamental para tal propriedade ser possível neste projecto, porque com a realização de testes de integração é possível garantir que todos os *pull requests* feitos pelos diversos colaboradores não vão introduzir erros, entre componentes que outrora funcionavam. 
+
 
 ### <a name="info"></a>Informações
 
