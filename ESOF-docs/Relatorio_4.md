@@ -114,25 +114,25 @@ Após realizada a correção, os autores deste relatório submeteram [um *pull r
 
 ### <a name="analise"></a>Análise Crítica
 
-####[controlabilidade](#controllability)
- podemos concluir que o projecto React utiliza duas ferramentas, Jest e Travis CI, que irão garantir que o seu código está dividamente desenvolvido.Para tal recorre-se ao uso de testes exaustivos para garantir o menor número posível de erros no programa.
+####[Controlabilidade](#controllability)
+Podemos concluir que o projecto React utiliza duas ferramentas, Jest e Travis CI, que irão garantir que o seu código está dividamente desenvolvido.Para tal recorre-se ao uso de testes exaustivos para garantir o menor número posível de erros no programa.
 
 ####[Observabilidade](#observability)
 
-####[isolabilidade](#isolateability) 
+####[Isolabilidade](#isolateability) 
 
 O uso do [Jest](https://facebook.github.io/jest/) tem um grande contributo nesta secção. Graças a esta ferramente, é possível testar especificamente o módulo desejado pelos *developers*, sem que o uso de funções externas ao módulo em causa seja uma variável ao teste, através do *mocks*, como descrito anteriormente.
 
-####[separação](#separation) 
+####[Separação](#separation) 
 
 Os responsáveis pelo React, foram, ao longo do tempo que despenderam no projecto, promovendo o uso de boas práticas de programação para garantir que o código estaria o mais organizado possível, mesmo com a adição de novos membros na ajuda.
 Para isso, recorreram ao uso de funções genéricas para evitar o uso de código repetido e criação de funções específicas tanto para o cliente como para o servidor. 
 
-####[inteligibilidade](#understandability) 
+####[Inteligibilidade](#understandability) 
 
 Mais uma vez, a *core-team* do React demonstra o seu rigor estrutural neste projeto, neste caso em relação à compreensão do código existente nesta biblioteca. Analisando todo código, é possível verificar o uso recorrente de comentários explicativos das funções apresentadas, por exemplo. Isto torna a tarefa de quem quer ajudar a crescer este proecto, algo muito mais fácil.
 
-####[heterogeneidade](#heterogeneity)
+####[Heterogeneidade](#heterogeneity)
 
 O Travis CI é uma ajuda fundamental para tal propriedade ser possível neste projecto, porque com a realização de testes de integração é possível garantir que todos os *pull requests* feitos pelos diversos colaboradores não vão introduzir erros, entre componentes que outrora funcionavam. 
 
