@@ -1,5 +1,5 @@
 # Relatório 4 - ESOF
-## Facebook/React - Verificação e Validação de Software
+## Facebook/React - Verificação e Validação de *Software*
 
 ### <a name="introducao"></a>Introdução
 
@@ -27,11 +27,11 @@ Outro tipo de testes que são realizados sobre a biblioteca React são os testes
 
 Como já foi referido anteriormente, as duas ferramentas usadas pelos colaboradores do projeto React, para efeitos de teste, são o [Jest](https://facebook.github.io/jest/), para [testes unitários](https://en.wikipedia.org/wiki/Unit_testing), e o [Travis CI](https://travis-ci.org/), para [testes de integração](https://en.wikipedia.org/wiki/Integration_testing).
 
-O Jest é uma *framework* para a definição de testes unitários desenvolvida pelo Facebook e é a principal ferramenta do género usada no projeto React, surgindo como uma extensão à *framework* [Jasmine](http://jasmine.github.io/edge/introduction.html). Entre as suas principais características, destaca-se o facto de permitir o [isolamento](http://facebook.github.io/jest/docs/automatic-mocking.html) de uma unidade de código, como será discutido na subsecção seguinte, e a execução de testes em processos paralelos, o que poderá contribuir para um melhor desempenho. A imagem seguinte refere-se às informações que são apresentadas aquando da execução de uma suite de testes unitários com Jest.
+O Jest é uma *framework* para a definição de testes unitários desenvolvida pelo Facebook e é a principal ferramenta do género usada no projeto React, surgindo como uma extensão à *framework* [Jasmine](http://jasmine.github.io/edge/introduction.html). Entre as suas principais características, destaca-se o facto de permitir o [isolamento](http://facebook.github.io/jest/docs/automatic-mocking.html) de uma unidade de código, como será discutido na subsecção seguinte, e a execução de testes em processos paralelos, o que poderá contribuir para um melhor desempenho. A imagem seguinte refere-se às informações que são apresentadas aquando da execução de uma suíte de testes unitários com Jest.
 
 <a name="results"></a>![Resultados de testes unitários com Jest](./Resources/jest_results.png)
 
-A ferramenta Travis CI foi já apresentada no [Relatório 2](./Relatorio_2.md#validacao). É utilizada para realizar testes de integração sobre o código submetido pelos colaboradores do projeto em *pull requests*, conforme explicado nesse relatório. Na página da ferramenta, é possível ver o resultado dos testes realizados, como mostra o [seguinte exemplo](https://travis-ci.org/facebook/react/builds/92171038), que diz respeito ao código submetido pelos autores deste relatório num *pull request*, como será descrito na secção [Correção de *Bug*](#opcional). Cada teste é composto por um conjunto de *jobs* associados, isto é, um conjunto de tarefas que o constituem. [Este *job*](https://travis-ci.org/facebook/react/jobs/92171040) faz parte do teste cujo resultado foi mostrado acima e consistiu na execução do Jest sobre uma suite de testes unitários que cobre todos os componentes da arquitetura da biblioteca, registando informações relevantes num *log*.
+A ferramenta Travis CI foi já apresentada no [Relatório 2](./Relatorio_2.md#validacao). É utilizada para realizar testes de integração sobre o código submetido pelos colaboradores do projeto em *pull requests*, conforme explicado nesse relatório. Na página da ferramenta, é possível ver o resultado dos testes realizados, como mostra o [seguinte exemplo](https://travis-ci.org/facebook/react/builds/92171038), que diz respeito ao código submetido pelos autores deste relatório num *pull request*, como será descrito na secção [Correção de *Bug*](#opcional). Cada teste é composto por um conjunto de *jobs* associados, isto é, um conjunto de tarefas que o constituem. [Este *job*](https://travis-ci.org/facebook/react/jobs/92171040) faz parte do teste cujo resultado foi mostrado acima e consistiu na execução do Jest sobre uma suíte de testes unitários que cobre todos os componentes da arquitetura da biblioteca, registando informações relevantes num *log*.
 
 Conclui-se, desta forma, que é possível observar e recolher informação útil sobre os resultados dos testes que são realizados sobre a biblioteca React.
 
@@ -47,13 +47,13 @@ Assim, é possível concluir que, ao ser usada a *framework* Jest para a defini�
 
 Ao desenvolver *software*, é importante garantir que cada funcionalidade implementada fique confinada, o mais possível, ao componente ao qual diz respeito, sob pena de o código resultar mais confuso e, por conseguinte, menos testável. Com efeito, em projetos de dimensão considerável, como é o do React, deve ser dada particular atenção a este aspeto, por forma a evitar a ocorrência de código desestruturado, que dificulta, a médio e a longo prazo, a sua manutenção.
 
-De uma forma geral, a biblioteca React apresenta uma separação de funcionalidades bem definida, característica essa que está patente na organização de todo o projeto. Tome-se o exemplo da [renderização de páginas](https://github.com/facebook/react/tree/master/src/renderers/dom). A renderização de uma página Web pode ser realizada quer no lado do cliente, quer no lado do servidor, ocorrendo de maneira diferente em ambos os casos. Existe, assim, uma separação de funcionalidades que é necessário frisar. Assim, essas duas funcionalidades são implementadas em diferentes *packages*, que se traduzem em diretórios distintos. Por outro lado, também é importante isolar o conjunto de funcionalidades que são comuns ao cliente e ao servidor, com o principal intuito de evitar a repetição de código, promovendo a sua [reutilização](https://en.wikipedia.org/wiki/Code_reuse). Desta forma, reduz-se o risco de incoerências. Assim, o *package* [*shared*](https://github.com/facebook/react/tree/master/src/renderers/dom/shared) contém as funcionalidades que serão usadas tanto no lado do cliente como no lado do servidor. 
+De uma forma geral, a biblioteca React apresenta uma separação de funcionalidades bem definida, característica que está patente na organização de todo o projeto. Tome-se o exemplo da [renderização de páginas](https://github.com/facebook/react/tree/master/src/renderers/dom). A renderização de uma página Web pode ser realizada quer no lado do cliente, quer no lado do servidor, ocorrendo de maneira diferente em ambos os casos. Existe, assim, uma separação de funcionalidades que é necessário frisar. Assim, essas duas funcionalidades são implementadas em diferentes *packages*, que se traduzem em diretórios distintos. Por outro lado, também é importante isolar o conjunto de funcionalidades que são comuns ao cliente e ao servidor, com o principal intuito de evitar a repetição de código, promovendo a sua [reutilização](https://en.wikipedia.org/wiki/Code_reuse). Desta forma, reduz-se o risco de incoerências. Assim, o *package* [*shared*](https://github.com/facebook/react/tree/master/src/renderers/dom/shared) contém as funcionalidades que serão usadas tanto no lado do cliente como no lado do servidor. 
 
 É importante notar que a separação de funcionalidades facilita o [isolamento](#isolateability) do componente a ser testado, aspeto fulcral na definição de testes unitários, conforme discutido na subsecção anterior.
 
 #### <a name="understandability"></a>Inteligibilidade
 
-Durante a conceção de uma suite de testes, é importante conhecer a funcionalidade dos componentes que estão a ser testados. Contudo, esse conhecimento só é possível caso exista uma documentação bem estruturada que torne os componentes facilmente inteligíveis. Em projetos de dimensão considerável, essa documentação possui uma importância acrescida, uma vez que facilita a compreensão do código e a separação de funcionalidades, promovendo a consistência.
+Durante a conceção de uma suíte de testes, é importante conhecer a funcionalidade dos componentes que estão a ser testados. Contudo, esse conhecimento só é possível caso exista uma documentação bem estruturada que torne os componentes facilmente inteligíveis. Em projetos de dimensão considerável, essa documentação possui uma importância acrescida, uma vez que facilita a compreensão do código e a separação de funcionalidades, promovendo a consistência.
 
 A biblioteca React apresenta uma [documentação](https://facebook.github.io/react/docs/top-level-api.html) dos vários serviços fornecidos que, do ponto de vista dos autores deste relatório, é extensiva, embora mantendo-se concisa. Para além desta documentação, é possível encontrar, ao longo do código, vários elementos, como comentários e nomes autoexplicativos, que facilitam o conhecimento global do projeto, assim como de cada componente em particular.
 
@@ -71,31 +71,21 @@ Assim, conclui-se que a utilização de um [repositório do GitHub](https://gith
 
 > "Test coverage analysis is an important tool that any development team taking testing seriously should use."
 
-> Arie van Deursen, 2013. 
+> [Arie van Deursen, 2013](http://avandeursen.com/2013/11/19/test-coverage-not-for-managers/). 
 
-Um importante elemento para o sucesso de um projeto consiste na geração de testes e na respetiva análise às estatísticas obtidas. No React, um projeto de elevada dimensão e importância, as estatísticas de teste são fundamentais para manter o rumo correto e permite a resolução dos problemas e erros que surjam.
+A análise às estatísticas obtidas a partir dos testes realizados permite perceber se os mesmos foram bem concebidos, o que é muito importante para o sucesso de um projeto. No React, um projeto de grande dimensão e de importância crescente, este aspeto é particularmente relevante. Nesta secção, serão apresentadas algumas estatísticas de cobertura dos testes realizados sobre a biblioteca React.
 
-#### <a name="travis"></a>Travis CI
-
-Travis CI consiste numa ferramenta muito versátil e útil para este projeto. Na sua vertente [Travis Logs](https://github.com/travis-ci/travis-logs), processa atualizações do log que são transmitidos de outra vertente, [Travis Worker](https://github.com/travis-ci/worker), via [RabbitMQ](http://www.rabbitmq.com/), um programa *open-source* [intermediário para envio de mensagens](https://en.wikipedia.org/wiki/Message_broker). Uma vez que todas as peças de log forem recebidas, e passado um tempo limite padronizado de 10 segundos, estas peças são agregadas num log final.
-
-#### <a name="jest"></a>Jest
-
-A *framework* [Jest](https://facebook.github.io/jest/), ferramenta para testes unitários do [Facebook](https://github.com/facebook/), é utilizada para testar as aplicações React de forma simples. Estes [testes](http://facebook.github.io/react/docs/test-utils.html) manipulam componentes do React averiguando o seu comportamento. Para um teste unitário operar numa unidade isolada da aplicação é necessário proceder ao *mock* de todos os módulos exceto aquele que está a ser testado. Jest constrói o *mocking* das partes de uma aplicação [Flux](https://facebook.github.io/flux/) trivial. Flux é a arquitetura da aplicação que o [Facebook utiliza](https://github.com/facebook/jest/blob/fd33aad1da1ed430b656719c7a0e00bb7952c6df/docs/TutorialReact.md) para construir aplicações *web* com o React.
-
-#### <a name="cobertura"></a>Cobertura dos Testes
-
-De forma a conseguir estudar a cobertura do projeto React, utilizou-se a ferramenta [istanbul](http://gotwarlost.github.io/istanbul/), que permite testar a cobertura de um código JavaScript.
+Os autores deste relatório utilizaram a ferramenta [istanbul](http://gotwarlost.github.io/istanbul/) como extensão à *framework* Jest para gerar as estatísticas de cobertura dos testes unitários sobre o React que são mostradas na imagem seguinte.
 
 ![Teste de Cobertura](./Resources/Testes de Cobertura.png)
 
-A partir da imagem acima, que testa todos os ficheiros presentes na pasta src do React, pode-se constatar que a cobertura a todos os projetos do React ultrapassa os 87% para os *statements*, para as *functions* e para as *lines* e 71% para os *branches*. Considera-se a cobertura razoável, sendo percetível pela imagem acima, para um projeto com a dimensão do React.
+A imagem acima permite constatar que a cobertura dos testes sobre o React ultrapassa os 87% ao nível das instruções (*statements*), das funções (*functions*) e das linhas (*lines*) e os 71% ao nível dos *branches*, isto é, ao nível dos [caminhos de execução](https://en.wikipedia.org/wiki/Decision-to-decision_path) - por exemplo, em instruções *if-then-else*. Os dados de cobertura parecem ser bastante satisfatórios para um projeto da dimensão do React.
 
 ### <a name="opcional"></a>Correção de *Bug*
 
 Após analisar o grau de testabilidade da biblioteca React, procedeu-se à seleção de um *bug* a partir da lista de *issues* do projeto e à conceção de casos de teste capazes de o reproduzir. O *bug* foi corrigido pelos autores deste relatório. Nesta secção, são apresentados alguns pormenores desse trabalho.
 
-O *bug* escolhido foi assinalado pela primeira vez [neste](https://github.com/facebook/react/issues/5468) *bug report*. Com o React, é possível definir classes de elementos que farão parte da Vista, conforme já discutido no [Relatório 2](Relatorio_2.md#casos-de-uso). Cada classe pode ter campos, opcionais ou obrigatórios, conhecidos como *props* na nomenclatura do React. Cada *prop* pertence a um determinado tipo de dados, designado de [**PropType**](http://facebook.github.io/react/docs/reusable-components.html#prop-validation), cuja definição permitirá a sua validação quando for passado a um objeto da classe. Esses tipos podem ser tipos primitivos ou definidos com o recurso a funções da API do React, como mostra o exemplo seguinte para um tipo de dados enumerado.
+O *bug* escolhido foi assinalado pela primeira vez [neste](https://github.com/facebook/react/issues/5468) *bug report*. Com o React, é possível definir classes de elementos que farão parte da Vista, conforme foi explicado no [Relatório 2](Relatorio_2.md#casos-de-uso). Cada classe pode ter campos, opcionais ou obrigatórios, conhecidos como *props* na nomenclatura do React. Podem ser definidos os tipos de dados, designados de [**PropTypes**](http://facebook.github.io/react/docs/reusable-components.html#prop-validation), esperados para cada *prop*, o que permitirá a validação destes campos quando os mesmos forem passados a um objeto da classe. Esses tipos podem ser primitivos ou compostos e são definidos com o recurso a funções da API do React, como mostra o exemplo seguinte para um tipo de dados enumerado.
 
 ```javascript
 // You can ensure that your prop is limited to specific values by treating
@@ -103,36 +93,23 @@ O *bug* escolhido foi assinalado pela primeira vez [neste](https://github.com/fa
 optionalEnum: React.PropTypes.oneOf(['News', 'Photos']),
 ```
 
-No exemplo acima, a função `React.PropTypes.oneOf()` deverá receber, como parâmetro, um *array* contendo o conjunto de valores possíveis que define o tipo de dados enumerado. Caso a função receba um objeto que não seja um *array*, deverá escrever um aviso na consola do *browser*. No entanto, antes da alteração realizada pelos autores deste relatório, esse aviso só era lançado no momento em que um objeto de uma dada classe anteriormente definida fosse instanciado e renderizado no DOM da página. Após a correção proposta, eventuais situações de erro como a descrita são assinaladas mais cedo, nomeadamente no momento em que a classe é criada, ou, mais genericamente, no momento em que a função `React.PropTypes.oneOf()` for chamada. Esta verificação também se passou a aplicar à função `React.PropTypes.oneOfType()`.
+No exemplo acima, a função `React.PropTypes.oneOf()` deverá receber, como parâmetro, um *array* contendo o conjunto de valores possíveis que define o tipo de dados enumerado. Caso a função receba um objeto que não seja um *array*, deverá escrever um aviso na consola do *browser*. No entanto, antes da alteração realizada pelos autores deste relatório, esse aviso só era lançado no momento em que um objeto de uma dada classe anteriormente definida fosse instanciado e renderizado no DOM da página. Após a correção proposta, eventuais situações de erro como a descrita são assinaladas mais cedo, nomeadamente no momento em que a classe é criada, ou, mais genericamente, no momento em que a função `React.PropTypes.oneOf()` é chamada. Esta verificação também se passou a aplicar à função `React.PropTypes.oneOfType()`, que define vários tipos possíveis para um dado *prop*.
 
-Adicionalmente, foi criado [um caso de teste](https://github.com/rppc/react/blob/changed/src/isomorphic/classic/class/__tests__/ReactClass-test.js#L384) para reprodução do *bug*. Os casos de teste realizados sobre a [primeira](https://github.com/rppc/react/blob/changed/src/isomorphic/classic/types/__tests__/ReactPropTypes-test.js#L570) e [segunda](https://github.com/rppc/react/blob/changed/src/isomorphic/classic/types/__tests__/ReactPropTypes-test.js#L638) funções descritas no parágrafo anterior foram alterados de forma a contemplarem o lançamento de avisos sempre que os argumentos são dados como inválidos.
+Adicionalmente, foi criado [um caso de teste](https://github.com/rppc/react/blob/changed/src/isomorphic/classic/class/__tests__/ReactClass-test.js#L384) para a reprodução do *bug*. Os casos de teste realizados sobre a [primeira](https://github.com/rppc/react/blob/changed/src/isomorphic/classic/types/__tests__/ReactPropTypes-test.js#L571) e [segunda](https://github.com/rppc/react/blob/changed/src/isomorphic/classic/types/__tests__/ReactPropTypes-test.js#L639) funções apresentadas no parágrafo anterior foram alterados de forma a contemplarem o lançamento de avisos sempre que os argumentos são dados como inválidos.
 
 Após realizada a correção, os autores deste relatório submeteram [um *pull request*](https://github.com/facebook/react/pull/5476), com vista à integração da mesma no projeto. À data deste relatório, os autores aguardam o resultado da apreciação do *pull request* por parte da *core team*.
 
 ### <a name="analise"></a>Análise Crítica
 
-####[Controlabilidade](#controllability)
-Podemos concluir que o projecto React utiliza duas ferramentas, Jest e Travis CI, que irão garantir que o seu código está dividamente desenvolvido.Para tal recorre-se ao uso de testes exaustivos para garantir o menor número posível de erros no programa.
+De um modo geral, nota-se uma clara preocupação por parte da *core team* do React em sistematizar e automatizar a componente de verificação e validação de *software*, recorrendo a duas ferramentas essenciais neste processo, o Jest e o Travis CI.
 
-####[Observabilidade](#observability)
+O Jest revela-se muito útil no que diz respeito ao isolamento da unidade de código a ser testada, através de uma funcionalidade designada de *mocking*, como foi explicado [anteriormente](#isolateability). No entanto, a ferramenta parece estar muito pouco otimizada, sendo esta uma das principais críticas apontadas pela comunidade. Os autores deste relatório também se depararam com esse problema. [Esta imagem](#results), apresentada anteriormente, mostra que um conjunto de 987 testes demorou cerca de 54 segundos a ser executado, um número que é pouco apelativo e que poderá, em certas condições, inviabilizar a utilização do Jest.
 
-####[Isolabilidade](#isolateability) 
+Conforme já fora discutido em relatórios anteriores, o projeto encontra-se bem estruturado, existindo um claro delineamento das funcionalidades que cada componente deverá implementar. Este aspeto permite que os testes sejam mais eficazes ao nível do isolamento da unidade de código a testar.
 
-O uso do [Jest](https://facebook.github.io/jest/) tem um grande contributo nesta secção. Graças a esta ferramente, é possível testar especificamente o módulo desejado pelos *developers*, sem que o uso de funções externas ao módulo em causa seja uma variável ao teste, através do *mocks*, como descrito anteriormente.
+A API da biblioteca encontra-se bem documentada e todo o código, para além de ser autoexplicativo, está devidamente comentado, o que permite uma melhor compreensão do componente que está a ser testado e uma mais fácil integração de novos colaboradores no projeto.
 
-####[Separação](#separation) 
-
-Os responsáveis pelo React, foram, ao longo do tempo que despenderam no projecto, promovendo o uso de boas práticas de programação para garantir que o código estaria o mais organizado possível, mesmo com a adição de novos membros na ajuda.
-Para isso, recorreram ao uso de funções genéricas para evitar o uso de código repetido e criação de funções específicas tanto para o cliente como para o servidor. 
-
-####[Inteligibilidade](#understandability) 
-
-Mais uma vez, a *core-team* do React demonstra o seu rigor estrutural neste projeto, neste caso em relação à compreensão do código existente nesta biblioteca. Analisando todo código, é possível verificar o uso recorrente de comentários explicativos das funções apresentadas, por exemplo. Isto torna a tarefa de quem quer ajudar a crescer este proecto, algo muito mais fácil.
-
-####[Heterogeneidade](#heterogeneity)
-
-O Travis CI é uma ajuda fundamental para tal propriedade ser possível neste projecto, porque com a realização de testes de integração é possível garantir que todos os *pull requests* feitos pelos diversos colaboradores não vão introduzir erros, entre componentes que outrora funcionavam. 
-
+A integração contínua das contribuições dos vários colaboradores do projeto é possibilitada pela ferramenta Travis CI, que desempenha um papel muito útil ao nível da realização de testes de integração sobre o código submetido em *pull requests*.
 
 ### <a name="info"></a>Informações
 
