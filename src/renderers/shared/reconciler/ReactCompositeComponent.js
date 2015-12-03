@@ -797,12 +797,16 @@ var ReactCompositeComponentMixin = {
         //if(typeof(this._instance.props.onErrorException) === 'function') {
         if(typeof(__handler) === 'function') {
 
-        // Execute the han
-        __handler(e);
-        return null;
-      }
+          // Execute the han
+          __handler(e);
+          return null;
+
+        } else {
+          warning(false, 'Uncaught user-defined exception.');
+          return null;
+        }
     }
-    
+
     if (__DEV__) {
       // We allow auto-mocks to proceed as if they're returning null.
       if (typeof renderedComponent === 'undefined' &&
