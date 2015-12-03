@@ -786,7 +786,23 @@ var ReactCompositeComponentMixin = {
    */
   _renderValidatedComponentWithoutOwnerOrContext: function() {
     var inst = this._instance;
-    var renderedComponent = inst.render();
+    
+    try {
+      var renderedComponent = inst.render();
+    
+    } catch(e) {
+
+      var __handler = this._instance._reactInternalInstance._currentElement.type.prototype.exceptionHandler;
+      
+        //if(typeof(this._instance.props.onErrorException) === 'function') {
+        if(typeof(__handler) === 'function') {
+
+        // Execute the han
+        __handler(e);
+        return null;
+      }
+    }
+    
     if (__DEV__) {
       // We allow auto-mocks to proceed as if they're returning null.
       if (typeof renderedComponent === 'undefined' &&
