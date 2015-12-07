@@ -20,7 +20,7 @@ A nossa abordagem então foi criar um novo método que é chamado quando o méto
 
 ### <a name="submissao"></a>Submissão do *patch*
 
-A *feature, após a sua implementação, foi sujeita a um pedido de *pull-request*, que pode ser encontrado no [GitHub](https://github.com/facebook/react/pull/5615).
+A *feature*, após a sua implementação, foi sujeita a um pedido de *pull-request*, que pode ser encontrado no [GitHub](https://github.com/facebook/react/pull/5615).
 
 ### <a name="analise"></a>Análise Crítica
 
