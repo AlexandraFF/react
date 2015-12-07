@@ -16,6 +16,7 @@ O [*git*](https://github.com/facebook/react) do projecto React disponibiliza uma
 
 ### <a name="evolução"></a>Evolução da *feature*
 
+A nossa abordagem então foi criar um novo método que é chamado quando o método *render* lança uma exeção. Mas surgiu-nos a dúvida em relação ao que iria de facto fazer esta implementação. Como o projeto *React* apresenta um nível de complexidade elevado, não quisemos fazer algo de muito complexo pois poderia interferir com outras funcionalidades já existentes e posteriormente não passar nos testes. Sendo assim, optamos por algo mais simples como imprimir para a consola a mensagem da exceção para aumentar as probabilidades de o *pull request* ser aceite. 
 
 ### <a name="submissao"></a>Submissão do *patch*
 
