@@ -7,7 +7,7 @@ Nesta última fase da unidade curricular de Engenharia de Software, foi pedida a
 
 ### <a name="feature"></a>Identificação de *feature*
 
-O [*git*] do projecto React(https://github.com/facebook/react) disponibiliza uma vasta [lista de issues](https://github.com/facebook/react/issues) encontrados por todos os contribuidores. Após uma análise cuidada da mesma, o grupo decidiu evoluir a [seguinte feature](https://github.com/facebook/react/issues/5549). Para a perceber melhor, o criador do seu tópico disponibilizou um [executável](http://jsbin.com/mifedepada/edit?js,console,output) e que depois de analisado percebemos que não havia a possibilidade de apanhar exeções quando o método *render* de um *ReactCompositeComponent* falhava.
+O [git](https://github.com/facebook/react) do projecto React disponibiliza uma vasta [lista de issues](https://github.com/facebook/react/issues) encontrados por todos os contribuidores. Após uma análise cuidada da mesma, o grupo decidiu evoluir a [seguinte feature](https://github.com/facebook/react/issues/5549). Para a perceber melhor, o criador do seu tópico disponibilizou um [executável](http://jsbin.com/mifedepada/edit?js,console,output) e que depois de analisado percebemos que não havia a possibilidade de apanhar exeções quando o método *render* de um *ReactCompositeComponent* falhava.
 
 
 ### <a name="componentes"></a>Identificação de componentes que implementam a *feature*
