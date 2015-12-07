@@ -3,11 +3,14 @@
 
 ### <a name="introducao"></a>Introdução
 
+Nesta última fase da unidade curricular de Engenharia de Software, foi pedida a identificação e posterior implementação de uma *feature* que pudesse ser desenvolvida no projecto React. Assim sendo, vai ser exposta, de seguida, a *feature* que foi implementada pelos autores deste relatório. 
 
 ### <a name="feature"></a>Identificação de *feature*
 
 
+
 ### <a name="componentes"></a>Identificação de componentes que implementam a *feature*
+
 
 
 ### <a name="evolução"></a>Evolução da *feature*
@@ -15,7 +18,7 @@
 
 ### <a name="submissao"></a>Submissão do *patch*
 
-
+A *feature, após a sua implementação, foi sujeita a um pedido de *pull-request*, que pode ser encontrado no [GitHub](https://github.com/facebook/react/pull/5615).
 
 ### <a name="analise"></a>Análise Crítica
 
