@@ -3,7 +3,7 @@
 
 ### <a name="introducao"></a>Introdução
 
-Nesta última fase da unidade curricular de Engenharia de Software, foi pedida a identificação e posterior implementação de uma *feature* que pudesse ser desenvolvida no projecto React. Assim sendo, vai ser exposta, de seguida, a *feature* que foi implementada pelos autores deste relatório. 
+Nesta fase final do projeto desenvolvido no âmbito da unidade curricular de Engenharia de Software, os autores deste relatório procederam à identificação e posterior implementação de uma nova funcionalidade sobre a biblioteca React. O presente relatório tem como objetivo a exposição da nova funcionalidade desenvolvida. 
 
 ### <a name="feature"></a>Identificação de *feature*
 
