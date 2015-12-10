@@ -3,7 +3,8 @@
 
 ### <a name="introducao"></a>Introdução
 
-Nesta fase final do projeto desenvolvido no âmbito da unidade curricular de Engenharia de Software, os autores deste relatório procederam à identificação e posterior implementação de uma nova funcionalidade sobre a biblioteca React. O presente relatório tem como objetivo a exposição da nova funcionalidade desenvolvida. 
+Nesta fase final do projeto desenvolvido no âmbito da unidade curricular de Engenharia de Software, os autores deste relatório procederam à identificação e posterior implementação de uma nova funcionalidade sobre a biblioteca React. O presente relatório tem como objetivo a exposição da nova funcionalidade desenvolvida, bem como de algumas reflexões gerais sobre o projeto React.
+
 
 ### <a name="feature"></a>Identificação da Funcionalidade
 
