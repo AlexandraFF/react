@@ -13,10 +13,10 @@ Como já foi explicado em relatórios anteriores, a funcionalidade do React base
 
 ```javascript
 try {
-React.render(
-  <MyComponent name="Joe Schmoe"/>,
-  document.getElementById('example')
-); 
+	React.render(
+	  <MyComponent name="Joe Schmoe"/>,
+	  document.getElementById('example')
+	); 
 } catch (e) {
   console.error('err', e)
 }
