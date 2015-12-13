@@ -10,7 +10,7 @@ Nesta fase final do projeto desenvolvido no âmbito da unidade curricular de Eng
 
 O [repositório](https://github.com/facebook/react) do projeto React disponibiliza uma vasta [lista de *issues*](https://github.com/facebook/react/issues) que é alimentada pelos seus colaboradores, como já foi referido em [relatórios anteriores](./Relatorio_2.md#levantamento). Após uma análise cuidada da mesma, o grupo decidiu evoluir uma funcionalidade que tem como base os *issues* [#2461](https://github.com/facebook/react/issues/2461) e [#5549](https://github.com/facebook/react/issues/5549).
 
-Como já foi explicado em relatórios anteriores, a funcionalidade do React baseia-se na definição de [componentes](http://facebook.github.io/react/docs/component-specs.html) que, quando instanciados, constituem um [DOM virtual](http://facebook.github.io/react/docs/glossary.html). Ao criar um componente, é necessário definir um [método `render()`](http://facebook.github.io/react/docs/component-specs.html#render), que especifica como o componente será apresentado no ecrã. Este método é chamado de forma assíncrona, apenas quando um componente sofre modificações que tornem necessária a realização de alterações sobre o DOM da página. Esta funcionalidade é vantajosa a nível de desempenho da aplicação, mas faz com que não seja possível apanhar exceções que sejam lançadas pelo método `render()` de forma tradicional. Por exemplo, o seguinte excerto de código não permite apanhar uma exceção lançada pelo método `render()` da classe `MyComponent`.
+Como já foi explicado em relatórios anteriores, a funcionalidade do React baseia-se na definição de [componentes](http://facebook.github.io/react/docs/component-specs.html) que, quando instanciados, constituem um [DOM virtual](http://facebook.github.io/react/docs/glossary.html). Ao criar um componente, é necessário definir um [método `render()`](http://facebook.github.io/react/docs/component-specs.html#render), que especifica como o mesmo será apresentado no ecrã. Este método é chamado de forma assíncrona, apenas quando um componente sofre modificações que tornem necessária a realização de alterações sobre o DOM da página. Esta funcionalidade é vantajosa a nível de desempenho da aplicação, mas faz com que não seja possível apanhar exceções que sejam lançadas pelo método `render()` de forma tradicional. Por exemplo, o seguinte excerto de código não permite apanhar uma exceção lançada pelo método `render()` da classe `MyComponent`.
 
 ```javascript
 try {
@@ -55,11 +55,11 @@ ReactDOM.render(<MyComponent a={false} name={"Rui Cardoso"} />, document.getElem
 
 #### <a name="componentes"></a>Identificação dos Componentes que Implementam a Funcionalidade
 
-O módulo da biblioteca React que implementa o *rendering* de um componente no DOM virtual designa-se [**ReactCompositeComponent**](https://github.com/facebook/react/blob/master/src/renderers/shared/reconciler/ReactCompositeComponent.js). [O método](https://github.com/rppc/react/blob/feature/src/renderers/shared/reconciler/ReactCompositeComponent.js#L787) que realiza a atualização do DOM da página foi alterado pelos autores deste relatório de forma a contemplar a possibilidade de exceções lançadas no método `render()` de cada componente, chamando a função `exceptionCallBack` caso esta tenha sido definida para esse componente.
+O módulo da biblioteca React que implementa o *rendering* de um componente no DOM virtual designa-se [**ReactCompositeComponent**](https://github.com/facebook/react/blob/master/src/renderers/shared/reconciler/ReactCompositeComponent.js). [O método](https://github.com/rppc/react/blob/feature/src/renderers/shared/reconciler/ReactCompositeComponent.js#L787) que realiza a atualização do DOM da página foi alterado pelos autores deste relatório de forma a contemplar a possibilidade de exceções lançadas no método `render()` de cada componente, chamando a função `exceptionCallBack` caso esta tenha sido definida.
 
 ### <a name="submissao"></a>Submissão de um *Pull Request*
 
-Após a implementação da nova funcionalidade, os autores [submeteram um *pull request*](https://github.com/facebook/react/pull/5615) com vista à sua integração na biblioteca React.
+Após a implementação da nova funcionalidade, os autores [submeteram um *pull request*](https://github.com/facebook/react/pull/5615) com vista à integração da mesma na biblioteca React.
 
 ### <a name="analise"></a>Análise Crítica
 
