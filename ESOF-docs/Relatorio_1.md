@@ -111,9 +111,17 @@ Tendo compreendido claramente a forma como o projeto está organizado e os requi
 ##### Autores:
 
 * António Casimiro (antonio.casimiro@fe.up.pt)
+  * Número de horas despendidas: 8
+	* Contribuição: 25%
 * Diogo Amaral (diogo.amaral@fe.up.pt)
+  * Número de horas despendidas: 8
+	* Contribuição: 25%
 * Pedro Silva (pedro.silva@fe.up.pt)
+  * Número de horas despendidas: 8
+	* Contribuição: 25%
 * Rui Cardoso (rui.peixoto@fe.up.pt)
+  * Número de horas despendidas: 8
+	* Contribuição: 25%
 
 Faculdade de Engenharia da Universidade do Porto - MIEIC
 
